@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        .receipt-container{
+            width: 70%;
+            border: 1px solid gray;
+            margin: 0 auto;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: block;
+            justify-content: center;
+            align-items: center;
+        }
+        .receipt-header{
+            border-bottom: 1px dashed grey;
+        }
+        .receipt-title{
+            text-align: center;
+            font-size: 30px;
+            margin: 30px 0;
+        }
+        .shop-logo{
+            width: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+        .shop-name{
+            text-align: center;
+        }
+        .shop-address{
+            text-align: center;
+        }
+        .shop-mobile{
+            text-align: center;
+        }
+        .receipt-detail{
+            display: flex;
+            justify-content: center;
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        .receipt-detail-key{
+            width: 20%;
+            padding: 0 20px;
+        }
+        .receipt-detail-value{
+            width: 80%;
+        }
+        .receipt-price{
+            width: 90%;
+        }
+        .total-amount{
+            text-align: center;
+            padding: 30px;
+            font-size: 20px;
+            border-bottom: 1px dashed;
+        }
+        .accountant-sign{
+            text-align: right;
+            margin-top: 70px;
+        }
+        .stamp{
+            width: 120px;
+            position: absolute;
+            right: 220px;
+            bottom: -30px;
+            transform: rotate(-20deg);
+        }
+        .receipt-body{
+            position: relative;
+            border-bottom: 1px dashed gray;
+        }
+        .receipt-footer{
+            text-align: center;
+            padding: 20px 0;
+            font-size: 20px;
+            background-color: rgba(243, 197, 111, 0.974);
+        }
+        .date{
+            text-align: left;
+        }
+
+        @media (max-width:600px) {
+            .shop-logo{
+                width: 80px;
+            }
+            .shop-name{
+                font-size: 20px;
+            }
+            .shop-address{
+                font-size: 13px;
+            }
+            .shop-mobile{
+                font-size: 13px;
+            }
+            .receipt-title{
+                font-size: 20px;
+            }
+            .receipt-detail{
+                font-size: 15px;
+            }
+            .total-amount{
+                font-size: 15px;
+                padding: 20px 50px 20px 15px;
+            }
+            .date{
+                font-size: 12px;
+            }
+            .accountant-sign{
+                font-size: 12px;
+                margin-top: 50px;
+            }
+            .stamp{
+                width: 80px;
+                position: absolute;
+                right: 100px;
+                bottom: 120px;
+                transform: rotate(-20deg);
+            }
+            .text{
+                font-size: 15px;
+            }
+            .receipt-footer{
+                font-size: 18px;
+                padding: 10px 0;
+            }
+            
+        }
+
+        @media (min-width:601px) and (max-width:800px) {
+            .shop-logo{
+                width: 90px;
+            }
+            .shop-name{
+                font-size: 25px;
+            }
+            .shop-address{
+                font-size: 15px;
+            }
+            .shop-mobile{
+                font-size: 15px;
+            }
+            .receipt-title{
+                font-size: 23px;
+            }
+            .receipt-detail{
+                font-size: 17px;
+            }
+            .total-amount{
+                font-size: 17px;
+                padding: 18px 60px 18px 15px;
+            }
+            .date{
+                font-size: 14px;
+            }
+            .accountant-sign{
+                font-size: 14px;
+                margin-top: 40px;
+            }
+            .stamp{
+                width: 88px;
+                position: absolute;
+                right: 120px;
+                bottom: 70px;
+                transform: rotate(-20deg);
+            }
+            .text{
+                font-size: 16px;
+            }
+            .receipt-footer{
+                font-size: 19px;
+                padding: 15px 0;
+            }
+        }
+
+        @media (min-width:801px) and (max-width:1100px) {
+            .shop-logo{
+                width: 95px;
+            }
+            .shop-name{
+                font-size: 28px;
+            }
+            .shop-address{
+                font-size: 17px;
+            }
+            .shop-mobile{
+                font-size: 17px;
+            }
+            .receipt-title{
+                font-size: 25px;
+            }
+            .receipt-detail{
+                font-size: 19px;
+            }
+            .total-amount{
+                font-size: 19px;
+                padding: 19px 65px 19px 15px;
+            }
+            .date{
+                font-size: 16px;
+            }
+            .accountant-sign{
+                font-size: 16px;
+                margin-top: 50px;
+            }
+            .stamp{
+                width: 95px;
+                position: absolute;
+                right: 160px;
+                bottom: 25px;
+                transform: rotate(-20deg);
+            }
+            .text{
+                font-size: 18px;
+            }
+            .receipt-footer{
+                font-size: 20px;
+                padding: 15px 0;
+            }
+            
+        }      
+    </style>
+</head>
+<body>
+    <div class="receipt-container">
+
+    <div class="receipt-header">
+        <img src="./pizza (1).png" alt="logo" class="shop-logo"/>
+        <h1 class="shop-name">Pizzeria</h1>
+    <p class="shop-address">
+        404, Above lotus hospital,<br>
+         Uruli-kanchan, <br>
+         Pune-412307
+    </p>
+    <p class="shop-mobile">
+        +91-1234567890
+    </p>
+    </div>
+
+    <div class="receipt-body">
+        <h3 class="receipt-title">Payment Receipt</h3>
+
+        <div class="receipt-detail">
+            <div class="receipt-detail-key">
+                <b>Qty</b>
+            </div>
+            <div class="receipt-detail-value">
+                <b>Item</b>
+            </div>
+            <div class="receipt-price">
+                <b>Price</b>
+            </div>
+        </div>
+        <div class="receipt-detail">
+            <div class="receipt-detail-key">
+                1
+            </div>
+            <div class="receipt-detail-value">
+                Margerita Pizza
+            </div>
+            <div class="receipt-price">
+                120
+            </div>
+        </div>
+
+        <div class="receipt-detail">
+            <div class="receipt-detail-key">
+                2
+            </div>
+            <div class="receipt-detail-value">
+                Cold Coffie
+            </div>
+            <div class="receipt-price">
+                80
+            </div>
+        </div>
+        </div>
+        <div class="total-amount">
+            <b>Total Amount :</b> 200/- 
+     </div>
+     <img src="./stampP.png" alt="stamp" class="stamp">
+
+       <p class="date">
+        Date : <br>1 january 2025
+       </p>
+
+        <p class="accountant-sign">
+            Accountant: Stamp <br><br><br>
+        </p>
+     <p class="text">
+        This is a computer generated receipt and does not require any signature.
+    </p>
+
+    <div class="receipt-footer">
+        Thank For Visiting!!
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
